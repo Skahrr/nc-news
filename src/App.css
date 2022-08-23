@@ -13,11 +13,19 @@ menu{
     gap: 1em;
     padding-right: 5px;
 }
+
+.drop{
+    color:green;
+}
+.drop .dropdown:hover{
+    color: red;
+}
 menu select{
-    border-radius: 10px;
+    border-radius: 8px;
+    text-transform: capitalize;
 }
 main{
-    padding-top: 100px;
+    padding-top: 140px;
     overflow: scroll;
     height: 80vh;
 }
@@ -30,11 +38,24 @@ article{
     border: 1px black solid;
     height: 10em;
     margin: 1em;
-}
-
-article #title{
+    flex-direction: column;
     
 }
+article #title{
+    font-size: larger;
+    font-weight: bold;
+}
+article #article-text{
+    height: 3.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+article #information{
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+}
+
 footer{
     text-align: center;
     

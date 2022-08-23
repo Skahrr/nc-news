@@ -1,25 +1,41 @@
-import { User } from "./User"
-import { fetchTopics } from "./apiCalls/fetchTopics"
-import { useState, useEffect } from "react"
+import { User } from "./User";
+import { fetchTopics } from "./apiCalls/fetchTopics";
+import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+
 export const Menu = () => {
-  const [topics, setTopics] = useState([])
+  const [topics, setTopics] = useState([]);
+  
 
-  useEffect(()=>{
-    fetchTopics().then((res)=>{
-      setTopics(res)
-    })
-  }, [])
+  useEffect(() => {
+    fetchTopics().then((res) => {
+      setTopics(res);
+    });
+  }, []);
+ 
 
-  {console.log(topics);}
   return (
     <menu>
+      <Link to={"/"}>
         <div>Home</div>
-        <select name="topics" id="topics">
-            <option value="Coding">Coding</option>
-            <option value="Football">Football</option>
-            <option value="Cooking">Cooking</option>
-        </select>
-        <User/>
+      </Link>
+      <ul>
+        <div>
+          <li>Topics</li>
+        </div>
+        <div>
+          {topics.map((topic) => {
+            return (
+              <li>
+                <Link to={`articles/${topic.slug}`}>
+                  {topic.slug}
+                </Link>
+              </li>
+            );
+          })}
+        </div>
+      </ul>
+      <User />
     </menu>
-  )
-}
+  );
+};
