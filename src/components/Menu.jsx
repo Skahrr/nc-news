@@ -1,5 +1,16 @@
 import { User } from "./User"
+import { fetchTopics } from "./apiCalls/fetchTopics"
+import { useState, useEffect } from "react"
 export const Menu = () => {
+  const [topics, setTopics] = useState([])
+
+  useEffect(()=>{
+    fetchTopics().then((res)=>{
+      setTopics(res)
+    })
+  }, [])
+
+  {console.log(topics);}
   return (
     <menu>
         <div>Home</div>
