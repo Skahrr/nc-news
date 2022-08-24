@@ -25,7 +25,7 @@ menu select{
     text-transform: capitalize;
 }
 main{
-    padding-top: 140px;
+    padding-top: 150px;
     overflow: scroll;
     height: 80vh;
 }
@@ -41,16 +41,20 @@ article{
     flex-direction: column;
     
 }
-article #title{
+.title{
     font-size: larger;
     font-weight: bold;
+}
+.title-single-article{
+    font-size:xx-large;
+    font-weight: bolder;
 }
 article #article-text{
     height: 3.5em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-article #information{
+.information{
     display: flex;
     justify-content: space-around;
     font-size: small;

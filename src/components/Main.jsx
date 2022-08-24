@@ -1,7 +1,7 @@
 import React from "react";
 import { fetchArticles } from "./apiCalls/fetchArticles";
 import { useEffect, useState,  } from "react";
-import { Article } from "./Article";
+import { ArticleDisplay } from "./ArticleDisplay";
 import { useParams } from "react-router-dom";
 
 export const Main = () => {
@@ -18,7 +18,7 @@ export const Main = () => {
     <main>
       {articles.map((article) => {
        
-          return <Article article={article} />;
+          return <ArticleDisplay article={article} />;
         
       })}
     </main>
