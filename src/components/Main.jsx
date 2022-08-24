@@ -18,7 +18,7 @@ export const Main = () => {
     <main>
       {articles.map((article) => {
        
-          return <ArticleDisplay article={article} />;
+          return <ArticleDisplay article={article} key={article.article_id}/>;
         
       })}
     </main>
