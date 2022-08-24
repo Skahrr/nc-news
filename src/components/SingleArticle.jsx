@@ -18,9 +18,9 @@ export const SingleArticle = () => {
       <div className="title-single-article">{article.title}</div>
       <div className="article-body">{article.body}</div>
       <div className="information">
-        <div className="author">Written by: {article.author}</div>
-        <div className="created_at">{article.created_at}</div>
-        <div className="comment_count">Comments: {article.comment_count}</div>
+        <p className="author">Written by: {article.author}</p>
+        <p className="created_at">{article.created_at}</p>
+        <p className="comment_count">Comments: {article.comment_count}</p>
       </div>
       <div className="votes">
         <label htmlFor="votes">Votes: {article.votes}</label>
