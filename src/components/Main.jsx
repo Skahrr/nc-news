@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchArticles } from "./apiCalls/fetchArticles";
+import { fetchArticles } from "../apiCalls/fetchArticles";
 import { useEffect, useState,  } from "react";
 import { ArticleDisplay } from "./ArticleDisplay";
 import { useParams } from "react-router-dom";
