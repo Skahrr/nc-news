@@ -1,4 +1,4 @@
-import { fetchComments } from "./apiCalls/fetchComments";
+import { fetchComments } from "../apiCalls/fetchComments";
 import { useState, useEffect } from "react";
 
 export const Comments = ({ article_id }) => {

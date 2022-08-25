@@ -1,5 +1,5 @@
 import { User } from "./User";
-import { fetchTopics } from "./apiCalls/fetchTopics";
+import { fetchTopics } from "../apiCalls/fetchTopics";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { fetchSingleArticle } from "./apiCalls/fetchSingleArticle";
-import { patchVotes } from "./apiCalls/patchVotes";
+import { fetchSingleArticle } from "../apiCalls/fetchSingleArticle";
+import { patchVotes } from "../apiCalls/patchVotes";
 import { BiUpvote } from "react-icons/bi";
 import { Comments } from "./Comments";
 
