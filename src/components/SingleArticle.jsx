@@ -4,6 +4,9 @@ import { fetchSingleArticle } from "../apiCalls/fetchSingleArticle";
 import { patchVotes } from "../apiCalls/patchVotes";
 import { BiUpvote } from "react-icons/bi";
 
+import { Comments } from "./Comments";
+
+
 export const SingleArticle = () => {
   let { topic, article_id } = useParams();
   const [article, setArticle] = useState([]);
@@ -53,6 +56,7 @@ export const SingleArticle = () => {
           <Link to={`/articles/${article.topic}`}>Back</Link>{" "}
         </button>
       </div>
+      <Comments article_id={article_id}/>
     </main>
   );
 };

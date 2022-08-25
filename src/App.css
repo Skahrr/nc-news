@@ -28,6 +28,8 @@ main{
     padding-top: 150px;
     overflow: scroll;
     height: 80vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 article{
     display:flex;
@@ -68,4 +70,24 @@ footer{
     width: 100%;
     position: fixed;
     height: 100%;
+}
+
+
+.single-comment{
+    
+    
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    padding: 5px;
+}
+
+.single-comment span{
+    height: max-content;
+    font-size: smaller
+}
+.article-comments h3{
+    
+    text-decoration:underline
 }
