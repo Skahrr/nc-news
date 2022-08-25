@@ -7,7 +7,7 @@ export const Comments = ({ article_id }) => {
     fetchComments(article_id).then((comments) => {
       setComments(comments);
     });
-  }, [comments]);
+  }, []);
 
   return (
     <div className="article-comments">
