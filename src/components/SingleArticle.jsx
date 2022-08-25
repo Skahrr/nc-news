@@ -10,6 +10,9 @@ export const SingleArticle = () => {
   let { topic, article_id } = useParams();
   const [article, setArticle] = useState([]);
   const [actualVotes, setActualVotes] = useState()
+  const [isDisabled, setDisabled] = useState(false)
+  const [voteError, setVoteError] = useState(false)
+
   useEffect(() => {
     fetchSingleArticle(topic, article_id).then((article) => {
       setArticle(article);
@@ -21,11 +24,18 @@ export const SingleArticle = () => {
 
 
   const incVotes = (e)=>{
-    console.log(actualVotes);
+    
     setActualVotes((currVotes)=>{
       return currVotes + 1
     })
-    patchVotes(article_id)
+    patchVotes(article_id).then(
+      setDisabled(true)
+    ).catch(()=>{
+      setVoteError(true)
+      setActualVotes((currVotes)=>{
+        return currVotes -1
+      })
+    })
   }
 
 
@@ -33,7 +43,7 @@ export const SingleArticle = () => {
   return (
     <main>
       <div className="title-single-article">{article.title}</div>
-      <div className="article-body">{article.body}</div>
+      <p className="article-body">{article.body}</p>
       <div className="information">
         <p className="author">Written by: {article.author}</p>
         <p className="created_at">{article.created_at}</p>
@@ -41,7 +51,8 @@ export const SingleArticle = () => {
       </div>
       <div className="votes">
         <label htmlFor="votes">Votes: {actualVotes}</label>
-        <button id="votes" onClick={incVotes}><BiUpvote/></button>
+        <button id="votes" onClick={incVotes} disabled={isDisabled}><BiUpvote/></button>
+        {voteError && <p>Something went wrong, please refresh the page</p>}
       </div>
       <div className="btn-back">
         <button><Link to={`/articles/${article.topic}`}>Back</Link> </button>
