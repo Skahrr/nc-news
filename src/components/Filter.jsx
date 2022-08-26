@@ -16,7 +16,6 @@ export const Filter = ({setSortBy, setOrder}) => {
         <option value="title">Title</option>
         <option value="author">Author</option>
         <option value="votes">Votes</option>
-        <option value="article_id">Article ID</option>
         <option value="topic">Topic</option>
       </select>
       <select name="" id="order" onChange={handleOrderChange}>
