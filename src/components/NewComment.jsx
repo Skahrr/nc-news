@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { postComment } from "../apiCalls/postComment";
-export const NewComment = ({ article_id }) => {
+export const NewComment = ({ article_id, comments, setComments, setIsPosted }) => {
   const [commentBody, setCommentBody] = useState("");
-
   const handleBody = (e) => {
     setCommentBody(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment(article_id, commentBody).then(() => {
-      window.location.reload();
+    setIsPosted(true)
+    postComment(article_id, commentBody).then(()=>{
+      setIsPosted(false)
     });
   };
   return (
