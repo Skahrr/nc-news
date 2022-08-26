@@ -4,7 +4,5 @@ const request = axios.create({
 })
 
 export const deleteComment = (comment_id)=>{
-    return request.delete(`/comments/${comment_id}`).then(()=>{
-        window.location.reload()
-    })
+    return request.delete(`/comments/${comment_id}`)
 }

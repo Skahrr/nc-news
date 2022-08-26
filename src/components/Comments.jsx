@@ -7,11 +7,16 @@ import { deleteComment } from "../apiCalls/deleteComment";
 export const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
   const {user} = useContext(UserContext)
-
+  
 
   const handleClick = (comment_id)=>{
-    deleteComment(comment_id);
-    
+    console.log();
+    deleteComment(comment_id).then(()=>{
+      fetchComments(article_id).then((updatedComments)=>{
+        setComments(updatedComments)
+        console.log(comments)
+      })
+    });
   }
   useEffect(() => {
     fetchComments(article_id).then((comments) => {
@@ -19,7 +24,7 @@ export const Comments = ({ article_id }) => {
         let da = new Date(a.created_at)
         let db = new Date(b.created_at)
         return  db-da;
-      }, [])
+      }, [article_id])
       
       setComments(comments);
     });
@@ -29,7 +34,7 @@ export const Comments = ({ article_id }) => {
     <>
     <div className="article-comments">
       <h3>Comments</h3>
-    <NewComment article_id={article_id}/>
+    <NewComment article_id={article_id} comments={comments} setComments={setComments}/>
     
       {comments.map((comment) => {
         
