@@ -8,6 +8,10 @@ header{
     box-shadow: 0px 1px 10px 2px;
     border-radius: 0px 0px 5px 5px;
 }
+#title{
+    font-size: xx-large;
+    font-weight: bold;
+}
 menu{
     display: flex;
     gap: 1em;
