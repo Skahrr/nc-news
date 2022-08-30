@@ -1,16 +1,5 @@
 # Northcoders News Project
 
-## About
-
-Northcoders news is an API designed as the backend for a news app. The API interacts with data and allows for the following functionality:
-
-- GET requests for users, topics, articles and their comments
-- GET requests for articles by an identifier
-- PATCH requests to add or remove votes
-- POST new comments
-- DELETE comments
-- Articles can be filtered by topic and sorted in specified orders.
-
 ## API
 
 Northcoders News is hosted on Heroku, you can find it here:
