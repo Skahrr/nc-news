@@ -25,7 +25,7 @@ git clone <project-name>
 
 Run "npm i" to install all the dependancies and "npm start" to see a local hosted version of the app on your browser.
 
-## 3. About
+# About
 
 This website relies on the API mentioned above (you can have a look either to the repo or to the hosted version *more info on it's readme.md*).
 You can see all the news we got on the database, as well as filter by topic. You also have a more specific filter where you can sort and order the news you looking at.
