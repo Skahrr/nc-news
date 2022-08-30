@@ -2,7 +2,7 @@
 
 ## API
 
-Northcoders News is hosted on Heroku, you can find it here:
+Northcoders News uses my own API, which is hosted aswell on Heroku. You can find more info here:
 
 https://github.com/Skahrr/BE-NC-News
 
