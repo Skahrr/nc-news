@@ -1,5 +1,14 @@
 # Northcoders News Project
 
+## About
+
+This website relies on the API mentioned under this (you can have a look either to the repo or to the hosted version *more info on it's readme.md*).
+You can see all the news we got on the database, as well as filter by topic. You also have a more specific filter where you can sort and order the news you looking at.
+
+You can have a look at the hosted version of this app here:
+https://best-nc-news.netlify.app/articles (we recommend to check this page on mobile version)
+
+
 ## API
 
 Northcoders News uses my own API, which is hosted aswell on Heroku. You can find more info here:
@@ -25,10 +34,3 @@ git clone <project-name>
 
 Run "npm i" to install all the dependancies and "npm start" to see a local hosted version of the app on your browser.
 
-# About
-
-This website relies on the API mentioned above (you can have a look either to the repo or to the hosted version *more info on it's readme.md*).
-You can see all the news we got on the database, as well as filter by topic. You also have a more specific filter where you can sort and order the news you looking at.
-
-You can have a look at the hosted version of this app here:
-https://best-nc-news.netlify.app/articles (we recommend to check this page on mobile version)
