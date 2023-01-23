@@ -1,6 +1,6 @@
 import axios from "axios";
 const request = axios.create({
-    baseURL: 'https://be-nc-news-aaron.herokuapp.com/api/'
+    baseURL: 'https://be-nc-news-x3yy.onrender.com/api/'
 })
 
 export const deleteComment = (comment_id)=>{
