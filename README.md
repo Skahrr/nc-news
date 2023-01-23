@@ -6,7 +6,7 @@ This website relies on the API mentioned under this (you can have a look either 
 You can see all the news we got on the database, as well as filter by topic. You also have a more specific filter where you can sort and order the news you looking at.
 
 You can have a look at the hosted version of this app here:
-https://best-nc-news.netlify.app/articles (we recommend to check this page on mobile version)
+https://best-nc-news.netlify.app/ (we recommend to check this page on mobile version)
 
 
 ## API
